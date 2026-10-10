@@ -40,3 +40,25 @@ If you need further assistance, check out the Node.js documentation.
 We've included a `launch.json` with this project that will setup debugging in VSCode. Try setting a breakpoint in `hello-world.mjs` and using the `launch-program` command on the `Run and Debug` tab to enter debugging mode. VSCode is recommended, but use whichever editor you are most comfortable with.
 
 Happy interviewing!
+
+
+Q:
+We have an existing JavaScript application that communicates with an external payment service. Implement a function that fetches payment records, processes the JSON response, and returns a simplified list of payments.
+Each payment should contain:
+- id
+- amount
+- currency
+- status
+- customerId
+Expected behaviour: Return the transformed payment list without exposing unnecessary fields from the original API response.
+
+Task:
+
+Handle API failures
+The external API sometimes returns an error or is unavailable. Modify the existing function to handle failed HTTP responses and network errors without crashing the application.
+Tests: HTTP 500, HTTP 404, network failure, malformed JSON.
+
+
+Add filtering
+Modify the function so it accepts an optional status and customerId. Return only matching payments. If no filters are provided, return all payments.
+Tests: one filter, both filters, no matches, no filters.
